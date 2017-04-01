@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar'
 import { SplashScreen } from '@ionic-native/splash-screen'
 import App from './app.component'
 import Home from '../pages/home/home'
+import { Navbar, Footer } from '../components'
 
 @NgModule({
   imports: [
@@ -11,6 +12,8 @@ import Home from '../pages/home/home'
   ],
   declarations: [
     App,
+    Navbar,
+    Footer,
     Home
   ],
   entryComponents: [

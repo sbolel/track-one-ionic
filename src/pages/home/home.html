@@ -1,9 +1,11 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Track One</ion-title>
-  </ion-navbar>
-</ion-header>
-
 <ion-content padding>
-
+  <ion-list no-lines>
+    <button ion-item *ngFor="let item of items" [innerText]="item.dateString"></button>
+  </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar (click)="add()">
+    <ion-title>Track One</ion-title>
+  </ion-toolbar>
+</ion-footer>
