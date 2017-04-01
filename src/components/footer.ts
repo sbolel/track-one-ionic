@@ -4,9 +4,9 @@ import { Component } from '@angular/core'
   selector: 'footer',
   template: `
     <ion-footer>
-      <ion-toolbar>
-          <ion-title>Track One</ion-title>
-        </ion-toolbar>
+      <button ion-button full>
+        mark one &nbsp; <ion-icon name="md-flag"></ion-icon>
+      </button>
     </ion-footer>
   `
 })

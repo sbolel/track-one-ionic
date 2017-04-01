@@ -1,2 +1,10 @@
-// App Global Sass
-// --------------------------------------------------
+/**
+ * Global Application Styles
+ */
+
+html, body {
+  height: 100vh;
+  overflow: hidden;
+  text-decoration: none;
+  width: 100vw;
+}

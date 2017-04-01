@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 
 @Component({
-  selector: 'navbar',
+  selector: 'header',
   template: `
     <ion-header clear>
       <ion-navbar color="light" clear>
@@ -14,7 +14,7 @@ import { Component } from '@angular/core'
     </ion-header>
   `
 })
-export class Navbar {
+export class Header {
   constructor() {
 
   }

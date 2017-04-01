@@ -1,30 +1,45 @@
-import { NgModule, ErrorHandler } from '@angular/core'
+/** @desc dependencies */
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular'
-import { StatusBar } from '@ionic-native/status-bar'
+import { NgModule, ErrorHandler } from '@angular/core'
 import { SplashScreen } from '@ionic-native/splash-screen'
+import { StatusBar } from '@ionic-native/status-bar'
+
+/** @desc components */
 import App from './app.component'
 import Home from '../pages/home/home'
-import { Navbar, Footer } from '../components'
+import { Header, Footer } from '../components'
 
+/**
+ * @desc the application Ionic module
+ * @exports {AppModule}
+ * @module {NgModule} IonicApp
+ * @requires { App, Home, Header, Footer }
+ * @requires SpashScreen, StatusBar
+ */
 @NgModule({
-  imports: [
-    IonicModule.forRoot(App)
+  bootstrap: [
+    IonicApp
   ],
   declarations: [
     App,
-    Navbar,
     Footer,
+    Header,
     Home
   ],
   entryComponents: [
     App,
     Home
   ],
-  bootstrap: [IonicApp],
+  imports: [
+    IonicModule.forRoot(App)
+  ],
   providers: [
-    StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    StatusBar,
+    {
+      provide: ErrorHandler,
+      useClass: IonicErrorHandler
+    }
   ]
 })
 export class AppModule {}
