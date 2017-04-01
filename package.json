@@ -1,6 +1,8 @@
 {
   "name": "track-one-ionic",
   "author": "Sinan Bolel <sinanbolel@gmail.com>",
+  "version": "0.1.0",
+  "description": "track-one-ionic: An Ionic project",
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
@@ -57,5 +59,9 @@
       "locator": "browser"
     }
   ],
-  "description": "track-one-ionic: An Ionic project"
+  "standard": {
+    "ignore": [
+      "src/service-worker.js"
+    ]
+  }
 }
