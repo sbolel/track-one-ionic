@@ -2,33 +2,22 @@ import { NgModule, ErrorHandler } from '@angular/core'
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular'
 import { StatusBar } from '@ionic-native/status-bar'
 import { SplashScreen } from '@ionic-native/splash-screen'
-import { MyApp } from './app.component'
-import { AboutPage } from '../pages/about/about'
-import { ContactPage } from '../pages/contact/contact'
-import { HomePage } from '../pages/home/home'
-import { TabsPage } from '../pages/tabs/tabs'
+import App from './app.component'
+import Home from '../pages/home/home'
 
 @NgModule({
-  declarations: [
-    MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage
-  ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(App)
   ],
-  bootstrap: [
-    IonicApp
+  declarations: [
+    App,
+    Home
   ],
   entryComponents: [
-    MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage
+    App,
+    Home
   ],
+  bootstrap: [IonicApp],
   providers: [
     StatusBar,
     SplashScreen,
