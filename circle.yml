@@ -27,6 +27,10 @@ stages:
           name: Installing dependencies
           command: npm install
 
+      - run:
+          name: Restoring Ionic state
+          command: ionic state restore
+
       - save_cache:
           key: node_modules
           paths:
