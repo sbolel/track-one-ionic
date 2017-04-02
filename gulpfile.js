@@ -3,13 +3,13 @@ const concat = require('gulp-concat')
 const uglify = require('gulp-uglifyjs')
 
 gulp.task('default', gulp.series(
-  compress,
-  bundle
+  bundle,
+  compress
 ))
 
 function compress() {
   return gulp.src('www/build/bundle.js')
-    .pipe(uglify('bundle.js'))
+    .pipe(uglify('bundle.min.js'))
     .pipe(gulp.dest('www/build'))
 }
 

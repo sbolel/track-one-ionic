@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "start": "ionic-app-scripts serve",
-    "build": "ionic-app-scripts build",
+    "build": "npm run ionic:build && gulp",
     "clean": "ionic-app-scripts clean",
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
