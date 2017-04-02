@@ -7,13 +7,13 @@ gulp.task('default', gulp.series(
   compress
 ))
 
-function compress() {
+function compress () {
   return gulp.src('www/build/bundle.js')
     .pipe(uglify('bundle.min.js'))
     .pipe(gulp.dest('www/build'))
 }
 
-function bundle() {
+function bundle () {
   return gulp.src([
     'www/build/polyfills.js',
     'www/build/main.js'
