@@ -8,6 +8,9 @@ import { StatusBar } from '@ionic-native/status-bar'
 import App from './app.component'
 import Home from '../pages/home/home'
 import { Header, Footer } from '../components'
+import firebaseConfig from '../firebase.config'
+
+firebaseConfig()
 
 /**
  * @desc the application Ionic module
