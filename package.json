@@ -39,7 +39,7 @@
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-concat": "^2.6.1",
     "gulp-uglifyjs": "^0.6.2",
-    "standard": "^9.0.2",
+    "standard": "^10.0.0",
     "typescript": "2.2.2"
   },
   "cordovaPlugins": [
