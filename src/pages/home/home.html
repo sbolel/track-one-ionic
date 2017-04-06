@@ -1,8 +1,19 @@
 <ion-content padding>
   <ion-list no-lines>
-    <button ion-item *ngFor="let item of items" [innerText]="item.dateString"></button>
-  </ion-list>
 
-  <footer (click)="add()"></footer>
+    <!-- newest -->
+    <section *ngIf="newest">
+      <ion-list-header>Most Recent</ion-list-header>
+      <button ion-item [innerText]="newest"></button>
+    </section>
+
+    <!-- rest -->
+    <section *ngIf="tracks.length">
+      <ion-list-header>Previous</ion-list-header>
+      <button ion-item *ngFor="let track of tracks" [innerText]="track"></button>
+    </section>
+
+  </ion-list>
 </ion-content>
 
+<footer (click)="add()"></footer>

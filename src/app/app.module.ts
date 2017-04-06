@@ -7,17 +7,15 @@ import { StatusBar } from '@ionic-native/status-bar'
 /** @desc components */
 import App from './app.component'
 import Home from '../pages/home/home'
-import { Header, Footer } from '../components'
+import { Footer } from '../components'
 import firebaseConfig from '../firebase.config'
 
 firebaseConfig()
 
 /**
- * @desc the application Ionic module
+ * @desc the main application Ionic module
  * @exports {AppModule}
  * @module {NgModule} IonicApp
- * @requires { App, Home, Header, Footer }
- * @requires SpashScreen, StatusBar
  */
 @NgModule({
   bootstrap: [
@@ -26,7 +24,6 @@ firebaseConfig()
   declarations: [
     App,
     Footer,
-    Header,
     Home
   ],
   entryComponents: [
@@ -39,10 +36,7 @@ firebaseConfig()
   providers: [
     SplashScreen,
     StatusBar,
-    {
-      provide: ErrorHandler,
-      useClass: IonicErrorHandler
-    }
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
 export class AppModule {}

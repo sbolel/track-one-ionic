@@ -3,9 +3,10 @@ import { Component } from '@angular/core'
 @Component({
   selector: 'footer',
   template: `
-    <ion-footer>
+    <ion-footer class="cta">
       <button ion-button full>
-        mark one &nbsp; <ion-icon name="md-flag"></ion-icon>
+        <span>Track One</span>
+        <ion-icon class="cta_icon" name="md-flag"></ion-icon>
       </button>
     </ion-footer>
   `
