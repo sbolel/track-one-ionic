@@ -1,3 +1,9 @@
 ion-footer {
   cursor: pointer;
 }
+
+.cta {
+  &_icon {
+    margin-left: 1rem;
+  }
+}

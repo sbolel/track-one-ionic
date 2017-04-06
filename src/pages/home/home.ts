@@ -1,24 +1,33 @@
 import { Component } from '@angular/core'
-import { NavController } from 'ionic-angular'
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export default class Home {
-  items: any = []
-
-  constructor(public navCtrl: NavController) {
-    const storedItems = JSON.parse(localStorage.getItem('trackedItems')) || []
-    this.items = this.items.concat(storedItems)
+  static get localStorage(): Array<string> {
+    const saved = localStorage.getItem('tracked_items')
+    return saved ? JSON.parse(saved) : []
   }
 
-  add() {
+  protected tracks: Array<string> = []
+  protected newest: string = null
+
+  constructor() {
+    this.tracks = Home.localStorage
+    this.newest = this.tracks.length ? this.tracks.shift() : null
+  }
+
+  protected updateLocalStorage() {
+    localStorage.setItem('tracked_items', JSON.stringify([this.newest].concat(this.tracks)))
+  }
+
+  protected add(): void {
+    if (this.newest) {
+      this.tracks.unshift(this.newest)
+    }
     const now = new Date()
-    this.items.push({
-      dateString: now.toLocaleString(),
-      timestamp: now.valueOf()
-    })
-    localStorage.setItem('trackedItems', JSON.stringify(this.items))
+    this.newest = now.toLocaleString()
+    this.updateLocalStorage()
   }
 }
