@@ -4,5 +4,5 @@
 
 <!-- links -->
 
-[build-img]: https://circleci.com/gh/sbolel/track-one-ionic.svg?style=svg&circle-token=e023aa48a0bd13c670bd8f78524ac39ef2cb2168
+[build-img]: https://circleci.com/gh/sbolel/track-one-ionic.svg?style=svg
 [build-url]: https://circleci.com/gh/sbolel/track-one-ionic
